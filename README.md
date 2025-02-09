@@ -30,6 +30,7 @@ Key Features
 ### 1. Canvas Setup
 #### Code Extract: 
 
+``` javscript
 function setup() {
   createCanvas(400, 400);
   ladybug = new Ladybug(width / 2, height / 2);
@@ -37,6 +38,7 @@ function setup() {
   targetX = ladybug.x;
   targetY = ladybug.y;
 }
+```
 
 #### Code Description:
 
@@ -50,6 +52,7 @@ function setup() {
 ### 2. Ladybug Class
 #### Code Extract:
 
+``` javacsript
 class Ladybug {
   constructor(x, y) {
     this.x = x;
@@ -83,7 +86,7 @@ class Ladybug {
     ellipse(this.x, this.y + 8, 8, 8);  // Bottom spot
   }
 }
-
+```
 #### Code Description:
 
     - The Ladybug class manages the ladybug's position and display.
@@ -96,6 +99,7 @@ class Ladybug {
 ### 3. Trail Creation
 #### Code Extract: 
 
+``` javacsript
 function createTrail() {
   trail.push(createVector(ladybug.x, ladybug.y));
   stroke(0, 255, 0);  // Green color for the trail
@@ -110,7 +114,7 @@ function createTrail() {
     trail.splice(0, 0);  // Remove the oldest trail points
   }
 }
-
+```
 #### Code Description:
 
     The createTrail() function tracks the ladybug's movement and creates a green trail using lines.
@@ -119,10 +123,12 @@ function createTrail() {
 ### 4. Interactive Behavior
 #### Code Extract:
 
+``` javacsript
 function mousePressed() {
   targetX = mouseX;
   targetY = mouseY;
 }
+```
 
 #### Code Description:
 
@@ -134,10 +140,11 @@ function mousePressed() {
 ### 5. Timed Transition
 #### Code Extract:
 
+``` javascript
 function startLadybug() {
   showMessage = false;
 }
-
+```
 #### Code Description:
 
     After 2 seconds, the introductory message is removed, and the ladybug starts moving on its own.
